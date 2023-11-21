@@ -23,9 +23,8 @@ public class MyTestcases extends Parameters {
 
 		login();
 
-		// بدي يضيف عنصرين
-
-		add("Backpack", "Bolt");
+		add("Backpack", "Light", " Bolt T-Shirt");
+		Thread.sleep(3000);
 
 		logout();
 
@@ -33,15 +32,11 @@ public class MyTestcases extends Parameters {
 
 	@Test(priority = 2)
 	public void addthreeItems() throws InterruptedException {
-		driver.get(myWebsite);
 
 		login();
+		add("Backpack", "Onesie");
 
-		// بدي يضيف 3 عناصر
-
-		add("Backpack", "Light", "Onesie");
-
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		logout();
 
 	}
@@ -49,16 +44,14 @@ public class MyTestcases extends Parameters {
 	@Test(priority = 3)
 
 	public void addFourItems() throws InterruptedException {
-		driver.get(myWebsite);
 
 		login();
+		Thread.sleep(3000);
 
-		// بدي اياه يضيف اربع عناصر
-
-		add("Backpack", "Fleece", "Onesie", "allTheThings");
-
-		Thread.sleep(4000);
-		logout();
+		add(" Backpack", "Bolt T-Shirt", " Labs Onesie");
+		Thread.sleep(5000);
 
 	}
+//	
+
 }

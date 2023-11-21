@@ -37,9 +37,9 @@ public class Parameters {
 		}
 	}
 
-	private static boolean containitemName(String str, String... subStrings) {
-		for (String subString : subStrings) {
-			if (str.contains(subString)) {
+	private static boolean containitemName(String neededItemToBeAdded, String... itemNames) {
+		for (String itemName : itemNames) {
+			if (neededItemToBeAdded.contains(itemName)) {
 				return true;
 
 			}
@@ -59,8 +59,7 @@ public class Parameters {
 		driver.findElement(By.xpath("//*[@id=\"react-burger-menu-btn\"]")).click();
 		Thread.sleep(1000);
 
-		driver.findElement(By.xpath(
-				"<a id=\"logout_sidebar_link\" class=\"bm-item menu-item\" href=\"#\" tabindex=\"0\" style=\"display: block;\">Logout</a>"))
-				.click();
+		driver.findElement(By.id("logout_sidebar_link")).click();
 	}
+
 }
